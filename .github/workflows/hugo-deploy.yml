@@ -1,0 +1,74 @@
+# İş akışımızın adı
+name: Deploy Hugo site to GitHub Pages
+
+# Bu iş akışı ne zaman tetiklenecek?
+on:
+  # 'main' branch'ine her push yapıldığında
+  push:
+    branches:
+      - main
+  # Bu satır, bu iş akışını GitHub'ın Actions sekmesinden manuel olarak da çalıştırabilmemizi sağlar
+  workflow_dispatch:
+
+# İş akışının izinleri
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Aynı anda sadece 1 tane deploy işlemi çalışsın
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# Varsayılan ayarlar
+defaults:
+  run:
+    shell: bash
+
+# Yapılacak işler (Jobs)
+jobs:
+  # 'build' adında bir iş tanımlıyoruz
+  build:
+    # Bu iş, en güncel Ubuntu sanal makinesinde çalışacak
+    runs-on: ubuntu-latest
+    # İşin adımları (Steps)
+    steps:
+      # 1. Adım: Kodlarımızı sanal makineye indiriyoruz (Checkout)
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Temamız bir submodule olduğu için bu çok önemli!
+
+      # 2. Adım: Hugo'yu kuruyoruz
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 3. Adım: Sitemizi build ediyoruz
+      - name: Build
+        run: hugo --minify
+
+      # 4. Adım: Build edilen dosyaları (artifact) GitHub'a yüklüyoruz ki yayınlama işi kullanabilsin
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # 'deploy' adında ikinci bir iş tanımlıyoruz
+  deploy:
+    # Bu iş, 'build' işi başarıyla bittikten sonra çalışacak
+    needs: build
+    # GitHub'ın kendi Pages ortamında çalışacak
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Yayınlama adımları
+    steps:
+      # 1. Adım: Yayınlamayı gerçekleştiriyoruz
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
