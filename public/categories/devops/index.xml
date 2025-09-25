@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on DevOps Maceram</title>
+    <link>http://localhost:46461/categories/devops/</link>
+    <description>Recent content in DevOps on DevOps Maceram</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Thu, 25 Sep 2025 09:28:04 +0300</lastBuildDate>
+    <atom:link href="http://localhost:46461/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>İlk Yazım: Hugo Dünyasına Merhaba!</title>
+      <link>http://localhost:46461/posts/ilk-yazim/</link>
+      <pubDate>Thu, 25 Sep 2025 09:28:04 +0300</pubDate>
+      <guid>http://localhost:46461/posts/ilk-yazim/</guid>
+      <description>Bu benim Hugo ile oluşturduğum ilk makale&amp;hellip;</description>
+    </item>
+  </channel>
+</rss>

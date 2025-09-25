@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:46461/categories/</loc>
+    <lastmod>2025-09-25T10:15:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/</loc>
+    <lastmod>2025-09-25T10:15:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/categories/linux/</loc>
+    <lastmod>2025-09-25T10:15:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/posts/linux-temelleri/</loc>
+    <lastmod>2025-09-25T10:15:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/posts/</loc>
+    <lastmod>2025-09-25T10:15:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/iletisim/</loc>
+    <lastmod>2025-09-25T10:00:00+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/categories/devops/</loc>
+    <lastmod>2025-09-25T09:28:04+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/categories/hugo/</loc>
+    <lastmod>2025-09-25T09:28:04+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/posts/ilk-yazim/</loc>
+    <lastmod>2025-09-25T09:28:04+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:46461/tags/</loc>
+  </url>
+</urlset>

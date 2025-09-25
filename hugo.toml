@@ -1,0 +1,16 @@
+baseURL = 'http://example.org/'
+languageCode = 'tr-tr'
+title = 'DevOps Maceram'
+theme = 'ananke'
+
+[[menu.main]]
+  identifier = "anasayfa"
+  name = "Ana Sayfa"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "iletisim"
+  name = "İletişim"
+  url = "/iletisim/"
+  weight = 20

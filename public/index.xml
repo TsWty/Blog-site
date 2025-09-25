@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps Maceram</title>
+    <link>http://localhost:46461/</link>
+    <description>Recent content on DevOps Maceram</description>
+    <generator>Hugo</generator>
+    <language>tr-tr</language>
+    <lastBuildDate>Thu, 25 Sep 2025 10:15:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:46461/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Temel Komutları</title>
+      <link>http://localhost:46461/posts/linux-temelleri/</link>
+      <pubDate>Thu, 25 Sep 2025 10:15:00 +0300</pubDate>
+      <guid>http://localhost:46461/posts/linux-temelleri/</guid>
+      <description>Bir DevOps mühendisinin en iyi dostu komut satırıdır. İşte her gün kullanacağınız bazı temel Linux komutları:&#xA;ls: Dizindeki dosyaları listeler. cd: Dizin değiştirir. pwd: Mevcut dizini gösterir. </description>
+    </item>
+    <item>
+      <title>İletişim</title>
+      <link>http://localhost:46461/iletisim/</link>
+      <pubDate>Thu, 25 Sep 2025 10:00:00 +0300</pubDate>
+      <guid>http://localhost:46461/iletisim/</guid>
+      <description>Merhaba!&#xA;Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz:&#xA;LinkedIn: [Profil Linkiniz Buraya Gelecek] GitHub: [GitHub Profiliniz Buraya Gelecek] </description>
+    </item>
+    <item>
+      <title>İlk Yazım: Hugo Dünyasına Merhaba!</title>
+      <link>http://localhost:46461/posts/ilk-yazim/</link>
+      <pubDate>Thu, 25 Sep 2025 09:28:04 +0300</pubDate>
+      <guid>http://localhost:46461/posts/ilk-yazim/</guid>
+      <description>Bu benim Hugo ile oluşturduğum ilk makale&amp;hellip;</description>
+    </item>
+  </channel>
+</rss>
