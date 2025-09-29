@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = "https://tswty.github.io/Blog-site/"
 languageCode = 'tr-tr'
 title = 'DevOps Maceram'
 theme = 'ananke'
