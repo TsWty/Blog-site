@@ -1,13 +1,9 @@
-# İş akışımızın adı
 name: Deploy Hugo site to GitHub Pages
 
-# Bu iş akışı ne zaman tetiklenecek?
 on:
-  # 'main' branch'ine her push yapıldığında
   push:
     branches:
       - main
-  # Bu satır, bu iş akışını GitHub'ın Actions sekmesinden manuel olarak da çalıştırabilmemizi sağlar
   workflow_dispatch:
 
 # İş akışının izinleri
@@ -16,19 +12,15 @@ permissions:
   pages: write
   id-token: write
 
-# Aynı anda sadece 1 tane deploy işlemi çalışsın
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Varsayılan ayarlar
 defaults:
   run:
     shell: bash
 
-# Yapılacak işler (Jobs)
 jobs:
-  # 'build' adında bir iş tanımlıyoruz
   build:
     # Bu iş, en güncel Ubuntu sanal makinesinde çalışacak
     runs-on: ubuntu-latest
@@ -59,16 +51,13 @@ jobs:
 
   # 'deploy' adında ikinci bir iş tanımlıyoruz
   deploy:
-    # Bu iş, 'build' işi başarıyla bittikten sonra çalışacak
     needs: build
-    # GitHub'ın kendi Pages ortamında çalışacak
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     # Yayınlama adımları
     steps:
-      # 1. Adım: Yayınlamayı gerçekleştiriyoruz
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
